@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05E9CAE1-52C3-4D87-A4C7-FA3D42976DAD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GeoWallE.GraphicRuntime</RootNamespace>
+    <AssemblyName>GeoWallE.GraphicRuntime</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExpressionNode.cs" />
+    <Compile Include="GSharpNode.cs" />
+    <Compile Include="Objects\GSharpArc.cs" />
+    <Compile Include="Objects\GSharpCircle.cs" />
+    <Compile Include="Objects\GSharpLine.cs" />
+    <Compile Include="GSharpObject.cs" />
+    <Compile Include="Objects\GSharpMeasure.cs" />
+    <Compile Include="Objects\GSharpNumber.cs" />
+    <Compile Include="Objects\GSharpRay.cs" />
+    <Compile Include="Objects\GSharpSegment.cs" />
+    <Compile Include="Objects\GSharpSeq.cs" />
+    <Compile Include="Objects\GSharpText.cs" />
+    <Compile Include="Objects\GSharpUndefined.cs" />
+    <Compile Include="ProgramNode.cs" />
+    <Compile Include="Types\CircleType.cs" />
+    <Compile Include="Types\Interfaces booleanas\IAnd.cs" />
+    <Compile Include="Types\Interfaces booleanas\IEquals.cs" />
+    <Compile Include="Types\Interfaces booleanas\IGreater.cs" />
+    <Compile Include="Types\Interfaces booleanas\IGreaterOrEquals.cs" />
+    <Compile Include="Types\Interfaces booleanas\ILess.cs" />
+    <Compile Include="Types\Interfaces booleanas\ILessOrEquals.cs" />
+    <Compile Include="Types\Interfaces booleanas\INot.cs" />
+    <Compile Include="Types\Interfaces booleanas\INotEquals.cs" />
+    <Compile Include="Types\Interfaces booleanas\IOr.cs" />
+    <Compile Include="Types\Interfaces\IDivisible.cs" />
+    <Compile Include="Types\Interfaces\IDrawable.cs" />
+    <Compile Include="Objects\GSharpPoint.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatementNode.cs" />
+    <Compile Include="GSharpType.cs" />
+    <Compile Include="Types\Interfaces\Iintersect.cs" />
+    <Compile Include="Types\Interfaces\IMulticationable.cs" />
+    <Compile Include="Types\Interfaces\IMod.cs" />
+    <Compile Include="Types\Interfaces\ISummable.cs" />
+    <Compile Include="Types\Interfaces\ISubstractionable.cs" />
+    <Compile Include="Types\LineType.cs" />
+    <Compile Include="Types\NumberType.cs" />
+    <Compile Include="Types\PointType.cs" />
+    <Compile Include="Types\SequenceType.cs" />
+    <Compile Include="Types\TextType.cs" />
+    <Compile Include="Core\CodeLocation.cs" />
+    <Compile Include="Core\CompilingError.cs" />
+    <Compile Include="Core\ErrorCode.cs" />
+    <Compile Include="GSharpContext.cs" />
+    <Compile Include="GSharpExecutionContext.cs" />
+    <Compile Include="GDrawer.cs" />
+    <Compile Include="Core\OutputInfo.cs" />
+    <Compile Include="GPrinter.cs" />
+    <Compile Include="Types\Undefined.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
