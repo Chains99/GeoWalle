@@ -1,0 +1,26 @@
+﻿trazar(p1,p2,pt)=let
+draw {segment(p1,pt),segment(p2,pt)};
+in 0;
+
+Pintador(p1,p2,m,k,f1,f2)=if(k>100) then {} 
+else let 
+c1=circle(p1,m*k);
+a,_=intersect(segment(p1,p2),c1);
+x=trazar(f1,f2,a);
+pi=Pintador(p1,p2,m,k+1,f1,f2);
+in {};
+
+Division(p1,p2)=let 
+m= measure(p1,p2);
+c1=circle(p1,m);
+c2=circle(p2,m);
+a1,a2,_=intersect(c1,c2);
+m1=measure(point(0,0),point(0,100));
+a=m/m1;
+M=measure(point(0,0),point(0,1))*a;
+alfa = Pintador(p1,p2,M,1,a1,a2);
+in {};
+point p1;
+point p2;
+color green;
+a=Division(p1,p2);

@@ -1,0 +1,16 @@
+﻿Rombo(X,Y,P)=if P<=0 then undefined
+else let
+m= (measure(X,Y));
+c1=circle(X,m);
+c2=circle(Y,m);
+a,b,_=intersect(c1,c2);
+draw {segment(X,a),segment(a,Y),segment(Y,b),segment(b,X)};
+R1=Rombo(X,a,P-1);
+R2=Rombo(X,b,P-1);
+R3=Rombo(Y,a,P-1);
+R4=Rombo(Y,b,P-1);
+in undefined;
+
+p1=point(350,350);
+p2=point(300,300);
+A=Rombo(p1,p2,7);

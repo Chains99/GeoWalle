@@ -1,0 +1,9 @@
+﻿point sequence a;
+point p1;
+point p2;
+b = {p1,p2};
+k=count(a);
+p=count(b);
+c=if(k)then(point(100,100))else point(600,600);
+draw c;
+draw point(p,p+10);
